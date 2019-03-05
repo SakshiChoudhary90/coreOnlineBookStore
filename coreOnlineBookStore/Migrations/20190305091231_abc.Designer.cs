@@ -10,8 +10,8 @@ using coreOnlineBookStore.Models;
 namespace coreOnlineBookStore.Migrations
 {
     [DbContext(typeof(OnlineBookStoreDbContext))]
-    [Migration("20190305062423_initial")]
-    partial class initial
+    [Migration("20190305091231_abc")]
+    partial class abc
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

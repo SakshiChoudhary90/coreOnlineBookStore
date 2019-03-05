@@ -13,6 +13,7 @@ namespace coreOnlineBookStore.Models
        public DbSet<Author> Authors { get; set; }
         public DbSet<Publication> Publications { get; set; }
 
+      
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer("Data Source=TRD-512;Initial Catalog=OnlineBookStoreDb;Integrated Security=true;");
