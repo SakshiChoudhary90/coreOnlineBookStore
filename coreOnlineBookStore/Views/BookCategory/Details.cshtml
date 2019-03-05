@@ -1,0 +1,20 @@
+﻿
+@model coreOnlineBookStore.Models.BookCategory
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<br />
+<br />
+<br />
+<h2>Details</h2>
+<br />
+<div class="card" style="width: 18rem;">
+    <div class="card-body">
+        <h5 class="card-title"><b>Name : </b>@Html.DisplayFor(model => model.CategoryName)</h5>
+        <br />
+        <p class="card-text"><b>Description : </b>@Html.DisplayFor(model => model.CategoryDescription)</p>
+        <br />
+        <a asp-controller="BookCategory" asp-action="Index" class="btn btn-primary">Back To List</a>
+    </div>
+</div>

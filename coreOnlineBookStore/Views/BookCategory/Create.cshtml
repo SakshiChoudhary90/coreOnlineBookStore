@@ -1,0 +1,32 @@
+﻿@model coreOnlineBookStore.Models.BookCategory
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<br />
+<br />
+
+<h2><center><b><u>Add Book Category</u></b></center></h2>
+<br />
+
+<form asp-action="Create" asp-controller="BookCategory">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <div class="form-group">
+        <label asp-for="CategoryName"><b>Category Name</b></label>
+        <input type="text" asp-for="CategoryName" class="form-control" placeholder="Enter Category Name">
+        <span asp-validation-for="CategoryName" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="CategoryDescription"><b>Category Description</b></label>
+        <input type="text" asp-for="CategoryDescription" class="form-control" placeholder="Enter Category Description">
+        <span asp-validation-for="CategoryDescription" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+    <a asp-controller="BookCategory" asp-action="Index" class="btn btn-primary">Back To List</a>
+</form>
+

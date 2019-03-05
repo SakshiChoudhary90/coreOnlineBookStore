@@ -1,0 +1,24 @@
+﻿@model coreOnlineBookStore.Models.Author
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<br />
+<br />
+<br />
+<h2>Details</h2>
+
+<div class="card" style="width: 18rem;">
+    <div class="card-body">
+        <h5 class="card-title"><b>Name : </b>@Html.DisplayFor(model => model.AuthorName)</h5>
+        <br />
+        <p class="card-text"><b>Biography : </b>@Html.DisplayFor(model => model.AuthorBiography)</p>
+        <br />
+        <a asp-controller="Author" asp-action="Index" class="btn btn-primary">Back To List</a>
+    </div>
+</div>
+
+
+
+
+
