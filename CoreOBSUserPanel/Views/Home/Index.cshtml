@@ -1,0 +1,42 @@
+﻿@model IEnumerable<CoreOBSUserPanel.Models.Books>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_UserLayout.cshtml";
+}
+
+   
+    <div class="album py-5 bg-light">
+        <div class="container">
+            <div class="row">
+           @foreach (var item in Model)
+           {
+                <div class="col-md-4">
+                    <div class="card mb-4 shadow-sm">
+                       <img src="@item.BookImage" class="bd-placeholder-img card-image-top" />
+                       <div class="card-body">
+                           <p class="card-text" style="font-weight:bold;">@item.BookName</p>
+                           <p class="card-text" style="font-weight:bold;">@item.BookType</p>
+                          <div class="d-flex justify-content-between align-items-center">
+                               <div class="btn-group">
+                                   <button type="button" class="btn btn-sm btn-outline-secondary">View Details</button>
+                                   @*<button type="button" class="btn btn-sm btn-outline-secondary">Edit Details</button>*@
+                                   <a asp-controller="Cart" asp-action="Buy" asp-route-id="@item.BookId" class="">Buy</a>
+                               </div>
+                               <small class="text-muted">9 mins</small>
+                           </div>
+                       </div>
+                    </div>
+                </div>
+           }
+            </div>
+           
+        </div>
+    </div>
+   
+    <hr>
+</main>
+
+
+
+
+
